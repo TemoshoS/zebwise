@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Home from './components/Home';
@@ -13,6 +13,7 @@ function App() {
     <Router>
       <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/dashboard" element={<Dashboards />} />
       </Routes>
     </Router>
   );
