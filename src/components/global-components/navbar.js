@@ -9,7 +9,7 @@ function NavbarComponent() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid>
-                <Navbar.Brand href="#">Zebwise Platform</Navbar.Brand>
+                <Navbar.Brand href="../">Zebwise Platform</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -17,8 +17,9 @@ function NavbarComponent() {
                         style={{ maxHeight: '100px' }}
 
                     >
-                        <Nav.Link href="#action1">Complaints</Nav.Link>
-                        <Nav.Link href="#action2">Reports</Nav.Link>
+                        <Nav.Link href="../dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="../complaints">Complaints</Nav.Link>
+                        <Nav.Link href="../reports">Reports</Nav.Link>
                         {/*<NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">

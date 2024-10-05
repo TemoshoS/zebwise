@@ -6,7 +6,8 @@ import Bestpractice from './components/Bestpractice';
 import Complaints from './components/Complaints';
 import Dashboards from './components/Dashboards';
 import Footer from './components/Footer';
-import Reports from './components/Reports';
+import ReportsComponent from './components/Reports';
+import ComplaintsPage from "./components/Complaints";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboards />} />
+      <Route path="/complaints" element={<ComplaintsPage />} />
+      <Route path="/reports" element={<ReportsComponent />} />
+      <Route path="/reports" element={<ReportsComponent />} />
       </Routes>
     </Router>
   );
