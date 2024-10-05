@@ -1,0 +1,29 @@
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E6F0F8;
+  }
+  
+  .btn-teal {
+    background-color: #20c997;
+    border-color: #20c997;
+  }
+  
+  .btn-teal:hover {
+    background-color: #198754;
+    border-color: #198754;
+  }
+  
+  .text-teal {
+    color: #20c997 !important;
+  }
+  
+  .bg-teal-600 {
+    background-color: #20c997 !important;
+  }
+  
+  .bg-teal-100 {
+    background-color: #d1f2eb !important;
+  }
+  
