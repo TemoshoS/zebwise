@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'; // Import Outlet here
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'; // Ensure Outlet is imported
 import Home from './components/Home'; // Import Home component
 import SidebarComponent from './components/global-components/navbar'; // Import SidebarComponent
 import Complaints from './components/Complaints'; // Import other components
@@ -13,9 +13,8 @@ function SidebarLayout() {
   return (
     <div className="d-flex">
       <SidebarComponent /> {/* Sidebar stays fixed */}
-      <div className="flex-grow-1 ms-3 p-4">
-        {/* This is where the content for the current route will render */}
-        <Outlet /> {/* Render the matched child route elements here */}
+      <div className="flex-grow-1 ms-3 p-4" style={{ marginLeft: '250px' }}>
+        <Outlet /> {/* This will render the matched child route elements here */}
       </div>
     </div>
   );
