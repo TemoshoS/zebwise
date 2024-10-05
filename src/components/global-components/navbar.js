@@ -18,7 +18,7 @@ function SidebarComponent() {
             </div>
 
             {/* Main Content Area */}
-            <div className="flex-grow-1 ms-3 p-4" style={{ marginLeft: '250px' }}>
+            <div className="flex-grow-1 ms-3 p-4" style={{ marginRight: '500px' }}>
                 <Outlet /> {/* Render the matched child route elements here */}
             </div>
         </div>

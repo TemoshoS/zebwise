@@ -13,9 +13,9 @@ function SidebarLayout() {
   return (
     <div className="d-flex">
       <SidebarComponent /> {/* Sidebar stays fixed */}
-      <div className="flex-grow-1 ms-3 p-4" style={{ marginLeft: '250px' }}>
-        <Outlet /> {/* This will render the matched child route elements here */}
-      </div>
+    {/*  <div className="flex-grow-1 ms-3 p-4" style={{ marginLeft: '500px' }}>
+        <Outlet />  This will render the matched child route elements here
+      </div>*/}
     </div>
   );
 }
@@ -28,11 +28,11 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* Routes with the sidebar */}
-        <Route element={<SidebarLayout />}>
+        {/*<Route element={<SidebarLayout />}>*/}
           <Route path="dashboard" element={<Dashboards />} />
           <Route path="complaints" element={<Complaints />} />
           <Route path="reports" element={<Reports />} />
-        </Route>
+        {/*</Route>*/}
       </Routes>
     </Router>
   );
