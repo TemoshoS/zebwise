@@ -100,3 +100,18 @@ body {
   margin-left: 250px; /* Ensure main content does not overlap */
   padding: 20px; /* Optional padding */
 }
+
+.complaint-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for the form */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.complaint-form .alert {
+  margin-top: 10px;
+}
+
+

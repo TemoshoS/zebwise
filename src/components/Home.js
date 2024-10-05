@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image, Card } from 'react-bootstrap';
-import '..';
-import NavbarComponent from "./global-components/navbar"; // Ensure you have this file for custom styles
+import '..';// Ensure you have this file for custom styles
 
 export default function Home() {
   return (
       <>
-        <NavbarComponent />
+        
         <Container fluid className="d-flex justify-content-center align-items-center min-vh-100" style={{ backgroundColor: '#E6F0F8' }}>
           <Card className="bg-white rounded-3 shadow-lg p-5 w-100" style={{ maxWidth: '1000px' }}>
             {/* Header */}
@@ -35,7 +34,7 @@ export default function Home() {
                   EMS is a complete energy information management solution for your business allowing you to process, analyze, store and share energy usage and power quality data across your entire enterprise.
                 </p>
                 <div className="d-flex align-items-center gap-3 mb-4">
-                  <Button variant="teal" className="rounded-pill px-4 py-2">Get Started</Button>
+                  <Button variant="teal" className="rounded-pill px-4 py-2 font-color-white">Get Started</Button>
                   <a href="#" className="text-teal">How it works</a>
                 </div>
                 <div className="d-flex gap-3">

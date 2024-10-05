@@ -7,6 +7,7 @@ import SidebarComponent from './components/global-components/navbar'; // Import 
 import Complaints from './components/Complaints'; // Import other components
 import Dashboards from './components/Dashboards';
 import Reports from './components/Reports';
+import MakeComplaint from './components/Makecomplaint';
 
 // Layout with Sidebar
 function SidebarLayout() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="dashboard" element={<Dashboards />} />
           <Route path="complaints" element={<Complaints />} />
           <Route path="reports" element={<Reports />} />
+          <Route path="makecomplaint" element={<MakeComplaint />} />
         </Route>
       </Routes>
     </Router>
