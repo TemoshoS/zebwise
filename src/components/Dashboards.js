@@ -5,10 +5,14 @@ import {getSchedule} from "../services/load-shedding.service";
 // import { getSchedule } from '../services/load-shedding.service';
 import './Dashboards.css'
 import SidebarComponent from "./global-components/navbar";
+import TableDataService from "../services/table-data.service";
 
 export default function Dashboards() {
     const [schedule, setSchedule] = useState([]);
     const [showToast, setShowToast] = useState(false);
+    const [displayReports, setDisplayReports] = useState(false);
+    const [displayComplaints, setDisplayComplaints] = useState(false);
+    const [displayElectricity, setDisplayElectricity] = useState(false);
 
     // Fetch load-shedding schedule data
     useEffect(() => {
@@ -25,6 +29,28 @@ export default function Dashboards() {
 
         return () => clearInterval(interval);
     }, []);
+
+    function toggleView(view){
+        switch (view) {
+            case "reports":
+                setDisplayReports(true);
+                break;
+
+            case  'complaints':
+                setDisplayComplaints(true)
+                break;
+
+            case  'electricity':
+                setDisplayElectricity(true);
+                break;
+
+        }
+    }
+
+
+
+
+
 
     return (
 
@@ -75,25 +101,27 @@ export default function Dashboards() {
             </ToastContainer>
         </Container>*/}
 
-    <SidebarComponent style={{marginRight: 500}} > </SidebarComponent>
-     <div class="container d-flex">
+    <SidebarComponent > </SidebarComponent>
+     <div class="container d-flex bg-white">
          <div class="container pt-5  overflow-auto">
-         <div class=" bg-light p-0 m-0 mb-5">
-
-
+             <div class='mb-5'>
+                 <p class='fs-3 fw-bold text-muted m-0 p-0'>Dashboard</p>
+                 <p class='fs-6 text-muted'>Monitor the electricity yearly complaints and reports </p>
+             </div>
+             <div class=" bg-light p-0 m-0 mb-5">
              <div class="card-header d-lg-flex justify-content-lg-between p-0 m-0">
                  <ul class="nav cursor-pointer p-0 m-0">
-                     <li class="nav-item" >
+                     <li class="nav-item"  onclick={() => toggleView('reports')} >
                          <a class="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-primary " aria-current="page"  >
                           Reports
                          </a>
                     </li>
-                    <li class="nav-item" >
+                    <li class="nav-item" onclick={() => toggleView('complaints')}>
                          <a class="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-primary " aria-current="page"  >
                             Complaints
                         </a>
                     </li>
-                <li class="nav-item" >
+                <li class="nav-item"  onclick={() => toggleView('electricity')}>
                  <a class="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-primary " aria-current="page"  >
                  Electricity Supply
                 </a>
@@ -101,7 +129,10 @@ export default function Dashboards() {
             </ul>
         </div>
     <div  class="table-responsive rounded-2 ps-3">
-        <table class="table table-hover table-striped table-sm align-middle " >
+
+        <TableDataService/>
+
+{/*        <table class="table table-hover table-striped table-sm align-middle " >
         <thead >
                 <tr>
                 <th class="text-secondary bg-white py-3">No</th>
@@ -134,7 +165,7 @@ export default function Dashboards() {
 </td>
 </tr>
 </tbody>
-</table>
+</table>*/}
 
             </div>
 
