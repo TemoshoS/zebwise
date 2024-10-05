@@ -65,3 +65,38 @@ body {
 .bg-teal-100 {
   background-color: #d1f2eb !important;
 }
+/* App.css */
+.sidebar {
+  width: 250px; /* Set fixed width for sidebar */
+}
+/* App.css */
+.sidebar {
+  width: 250px; /* Set fixed width for sidebar */
+  background-color: #20C997; /* Set background color */
+  height: 100vh; /* Ensure it takes full height */
+  position: fixed; /* Keep it fixed on the left */
+  padding: 16px; /* Add some padding */
+  color: white; /* Set text color to white */
+}
+
+.sidebar a {
+  color: white; /* Set link color to white */
+  padding: 8px; /* Add padding to the links */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the whole area clickable */
+  transition: all 0.3s ease; /* Smooth transition */
+  width: 100%;
+}
+
+/* Hover and active styles */
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active {
+  background-color: white; /* White background on hover */
+  color: #20C997; /* Change text color to #20C997 */
+}
+
+.main-content {
+  margin-left: 250px; /* Ensure main content does not overlap */
+  padding: 20px; /* Optional padding */
+}

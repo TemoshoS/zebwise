@@ -1,51 +1,28 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link, Outlet } from 'react-router-dom';
 
-function NavbarComponent() {
+
+function SidebarComponent() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
-            <Container fluid>
-                <Navbar.Brand href="#">Zebwise Platform</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
+        <div className="d-flex">
+            {/* Sidebar with the sidebar class */}
+            <div className="sidebar">
+                <h4>Zebwise Platform</h4>
+                <Nav className="flex-column">
+                    {/* Using Link for navigation */}
+                    <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                    <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
+                    <Nav.Link as={Link} to="/reports">Reports</Nav.Link>
+                </Nav>
+            </div>
 
-                    >
-                        <Nav.Link href="#action1">Complaints</Nav.Link>
-                        <Nav.Link href="#action2">Reports</Nav.Link>
-                        {/*<NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
-                                Something else here
-                            </NavDropdown.Item>
-                        </NavDropdown>*/}
-                        {/*<Nav.Link href="#" disabled>
-                            Link
-                        </Nav.Link>*/}
-                    </Nav>
-                    <Form className="d-flex">
-                        <Form.Control
-                            type="search"
-                            placeholder="Search"
-                            className="me-2"
-                            aria-label="Search"
-                        />
-                        <Button variant="outline-success">Search</Button>
-                    </Form>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+            {/* Main Content Area */}
+            <div className="flex-grow-1 ms-3 p-4" style={{ marginLeft: '250px' }}>
+                <Outlet /> {/* Render the matched child route elements here */}
+            </div>
+        </div>
     );
 }
 
-export default NavbarComponent;
+export default SidebarComponent;

@@ -1,11 +1,12 @@
-import React from 'react'
-import NavbarComponent from "./global-components/navbar";
+import React from 'react';
 
-export default function Dashboards() {
-  return (
-
-    <>
-      <NavbarComponent />
-    </>
-  )
+function Dashboards() {
+    return (
+        <div>
+            <h1>Dashboard</h1>
+            <p>This is the dashboard content.</p>
+        </div>
+    );
 }
+
+export default Dashboards;
