@@ -1,4 +1,7 @@
 import React from 'react'
+import { Form, Button, Container } from 'react-bootstrap';
+import Navbar from "react-bootstrap/Navbar";
+import NavbarComponent from "./global-components/navbar";
 
 export default function Reports() {
   return (
