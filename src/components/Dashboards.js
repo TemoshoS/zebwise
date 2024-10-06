@@ -5,6 +5,7 @@ import {getSchedule} from "../services/load-shedding.service";
 // import { getSchedule } from '../services/load-shedding.service';
 import './Dashboards.css'
 import SidebarComponent from "./global-components/navbar";
+import TableDataService from "../services/table-data.service";
 
 export default function Dashboards() {
     const [schedule, setSchedule] = useState([]);
