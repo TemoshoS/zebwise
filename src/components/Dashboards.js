@@ -106,7 +106,7 @@ export default function Dashboards() {
          <div class="container pt-5  overflow-auto">
              <div class='mb-3'>
                  <p class='fs-3 fw-bold text-muted m-0 p-0'>Dashboard</p>
-                 <p class='fs-6 text-muted'>Monitor the electricity yearly complaints and reports </p>
+                 <p class='fs-6 text-muted'>Track and analyze yearly service delivery complaints and reports</p>
              </div>
              <div class='d-flex align-items-center gap-2 mb-3'>
                  <div className="col-lg-3 p-2">

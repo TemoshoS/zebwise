@@ -10,6 +10,8 @@ import Reports from './components/Reports';
 import MakeComplaint from './components/Makecompliment';
 import ServiceRequestTracking from './components/Tracking';
 import Leaderboard from './components/Leaderboard';
+import Settings from './components/Settings'
+import Notifications from './components/Notifications';
 
 // Layout with Sidebar
 function SidebarLayout() {
@@ -39,6 +41,8 @@ function App() {
           <Route path="complaints" element={<Complaints />} />
           <Route path="reports" element={<Reports />} />
           <Route path="leaderboard" element={<Leaderboard />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="notifications" element={<Notifications />} />
         {/*</Route>*/}
       </Routes>
     </Router>

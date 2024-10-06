@@ -172,4 +172,32 @@ img {
   margin-left: 10px;
   vertical-align: middle;
 }
+.notifications-container {
+  background-color: #f8f9fa; /* Light background for better contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-count {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.notification-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.notification-list li {
+  padding: 10px;
+  border-bottom: 1px solid #e9ecef; /* Light border for separation */
+}
+.notification-count {
+  background-color: #ff4d4d; /* Red background */
+  color: white;              /* White text color */
+  border-radius: 50%;        /* Make it circular */
+  padding: 0.2em 0.5em;      /* Padding for better appearance */
+  margin-left: 5px;          /* Space between the text and count */
+  font-size: 0.9em;          /* Slightly smaller font */
+}
 
