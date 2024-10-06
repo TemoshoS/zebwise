@@ -7,7 +7,9 @@ import SidebarComponent from './components/global-components/navbar'; // Import 
 import Complaints from './components/Complaints'; // Import other components
 import Dashboards from './components/Dashboards';
 import Reports from './components/Reports';
-import MakeComplaint from './components/Makecomplaint';
+import MakeComplaint from './components/Makecompliment';
+import ServiceRequestTracking from './components/Tracking';
+import Leaderboard from './components/Leaderboard';
 
 // Layout with Sidebar
 function SidebarLayout() {
@@ -27,12 +29,16 @@ function App() {
       <Routes>
         {/* Home route without sidebar */}
         <Route path="/" element={<Home />} />
+        
+        <Route path="serviceRequesttracking" element={<ServiceRequestTracking/>} />
 
         {/* Routes with the sidebar */}
         {/*<Route element={<SidebarLayout />}>*/}
           <Route path="dashboard" element={<Dashboards />} />
+          <Route path="makecomplaint" element={<MakeComplaint />} />
           <Route path="complaints" element={<Complaints />} />
           <Route path="reports" element={<Reports />} />
+          <Route path="leaderboard" element={<Leaderboard />} />
         {/*</Route>*/}
       </Routes>
     </Router>

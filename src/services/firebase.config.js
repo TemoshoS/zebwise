@@ -1,19 +1,27 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-    apiKey: "AIzaSyB4XPTIUg3AdFsZyoKpIr-Y-tpZxDb4zZA",
-    authDomain: "zebwise-b7d25.firebaseapp.com",
-    projectId: "zebwise-b7d25",
-    storageBucket: "zebwise-b7d25.appspot.com",
-    messagingSenderId: "356172748830",
-    appId: "1:356172748830:web:cc2c121506d15e21c1b60f"
+  apiKey: "AIzaSyB2BjrlSICTdqYcvdOak07Sp4tUCnR5Wbk",
+  authDomain: "hotel-app-c2471.firebaseapp.com",
+  projectId: "hotel-app-c2471",
+  storageBucket: "hotel-app-c2471.appspot.com",
+  messagingSenderId: "481421676071",
+  appId: "1:481421676071:web:314fcf1168b260f9c58802",
+  measurementId: "G-0B5KZ6MXCY",
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const FIREBASE_APP = initializeApp(firebaseConfig);
-export const FIRESTORE_DB = getFirestore(FIREBASE_APP);
-export const storage = getStorage(app);
+const analytics = getAnalytics(app);
+
+const auth = getAuth();
+const db = getFirestore();
+
+export { auth, db };

@@ -135,4 +135,41 @@ body {
   margin-top: 10px;
 }
 
+.leaderboard-table {
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-light {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s ease;
+}
+
+.table-light:hover {
+  background-color: #e2e6ea;
+}
+
+.card-header {
+  background-color: #20C997;
+  color: white;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: #198754;
+  color: #ffffff;
+}
+
+img {
+  margin-left: 10px;
+  vertical-align: middle;
+}
 

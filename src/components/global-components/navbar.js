@@ -12,8 +12,11 @@ function SidebarComponent() {
                 <Nav className="flex-column">
                     {/* Using Link for navigation */}
                     <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                    <Nav.Link as={Link} to="/makecompliment">Post Complaint</Nav.Link>
                     <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
                     <Nav.Link as={Link} to="/reports">Reports</Nav.Link>
+                    <Nav.Link as={Link} to="/leaderboard">Leaderboard</Nav.Link>
+                    
                 </Nav>
             </div>
 
