@@ -8,6 +8,7 @@ import SidebarComponent from "./global-components/navbar";
 import TableDataService from "../services/table-data.service";
 import TableData2Service from "../services/table2-data.service";
 import TableData3Service from "../services/table3-data.service";
+import GraphAndChart from "./global-components/graphs";
 
 export default function Dashboards() {
     const [schedule, setSchedule] = useState([]);
@@ -63,30 +64,20 @@ export default function Dashboards() {
     return (
         <>
     <SidebarComponent > </SidebarComponent>
-     <div class="container d-flex bg-white">
-         <div class="container   overflow-auto">
-             <div class='mb-3'>
-                 <p class='fs-3 fw-bold text-muted m-0 p-0'>Dashboard</p>
-                 <p class='fs-6 text-muted'>Track and analyze yearly service delivery complaints and reports</p>
+     <div className="container d-flex ">
+         <div className="container   overflow-auto">
+             <div className='mb-3'>
+                 <p className='fs-3 fw-bold text-muted m-0 p-0'>Dashboard</p>
+                 <p className='fs-6 text-muted'>Track and analyze yearly service delivery complaints and reports</p>
              </div>
-             <div class='d-flex align-items-center gap-2 mb-3'>
-                 <div className="col-lg-3 p-2">
+             <div className='d-flex align-items-center gap-2 mb-3'>
+                 <div className="col-lg-4 p-2">
                      <div className="card shadow">
                          <div className="card-body">
-                             <div className="d-flex align-content-center">
-                                 <div class='pe-5'><h5 className="card-title"> Total&nbsp;Reports</h5>
-                                     <h5 className="card-text bold-text text-muted">555</h5></div>
-                                 <img src='/small-graphs.png' alt={'small-graphs'}/>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-                 <div className="col-lg-3 p-2">
-                     <div className="card shadow">
-                         <div className="card-body">
-                             <div className="d-flex align-content-center">
-                                 <div class='pe-3'><h5 className="card-title"> Total&nbsp;Complaints</h5>
-                                     <h5 className="card-text bold-text text-muted">305</h5></div>
+                             <div className="d-flex align-content-center justify-content-between">
+                                 <div className='pe-5'><h5 className="card-title"> Users</h5>
+                                     <h5 className="card-text bold-text text-muted">525605</h5>
+                                 </div>
                                  <img src='/small-graphs.png' alt={'small-graphs'}/>
                              </div>
                          </div>
@@ -95,9 +86,21 @@ export default function Dashboards() {
                  <div className="col-lg-4 p-2">
                      <div className="card shadow">
                          <div className="card-body">
-                             <div className="d-flex align-content-center">
-                                 <div class='pe-5'><h5 className="card-title"> Total&nbsp;Engagements</h5>
-                                     <h5 className="card-text bold-text text-muted">444</h5></div>
+                             <div className="d-flex align-content-center justify-content-between">
+                                 <div className='pe-3'><h5 className="card-title"> Daily Interactions</h5>
+                                     <h5 className="card-text bold-text text-muted">305</h5>
+                                 </div>
+                                 <img src='/small-graphs.png' alt={'small-graphs'}/>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div className="col-lg-4 p-2">
+                     <div className="card shadow">
+                         <div className="card-body">
+                             <div className="d-flex align-content-center justify-content-between">
+                                 <div className='pe-5'><h5 className="card-title"> Daily Resolved Issues</h5>
+                                     <h5 className="card-text bold-text text-muted">24</h5></div>
                                  <img src='/small-graphs.png' alt={'small-graphs'}/>
                              </div>
                          </div>
@@ -105,15 +108,17 @@ export default function Dashboards() {
                  </div>
              </div>
 
-             <div class=" bg-light p-0 m-0 mb-5">
-                 <div class="bg-secondary d-lg-flex justify-content-lg-between p-0 m-0">
-                     <div class="nav cursor-pointer p-0 m-0">
-                         <li class="nav-item cursor-pointer"  style={{
+             <GraphAndChart />
+
+             <div className="  p-0 m-0 mb-5">
+                 <div className="bg-secondary d-lg-flex justify-content-lg-between p-0 m-0">
+                     <div className="nav cursor-pointer p-0 m-0">
+                         <li className="nav-item cursor-pointer" style={{
                              backgroundColor: displayReports ? '#20C997' : 'inherit',
                              color: displayReports ? 'white' : '#414143FF',
                              cursor: 'pointer',
                          }} >
-                             <a class="nav-link btn-primary px-5 p-3  text-uppercase fw-semibold  "
+                             <a className="nav-link btn-primary px-5 p-3  text-uppercase fw-semibold  "
                                 style={{
                                     color: displayReports ? 'white' : '#414143FF',
                                 }}
@@ -122,14 +127,14 @@ export default function Dashboards() {
                                  Reports
                              </a>
                          </li>
-                         <li class="nav-item cursor-pointer"
+                         <li className="nav-item cursor-pointer"
                              style={{
                                  backgroundColor: displayComplaints ? '#20C997' : 'inherit',
                                  color: displayComplaints ? 'white' : '#414143FF',
                                  cursor: 'pointer',
                              }}
                          >
-                             <a class="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold  "  style={{
+                             <a className="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold  " style={{
                                  color: displayComplaints ? 'white' : '#414143FF',
                              }}
 
@@ -138,14 +143,14 @@ export default function Dashboards() {
                                  Complaints
                              </a>
                          </li>
-                         <li class="nav-item cursor-pointer"
+                         <li className="nav-item cursor-pointer"
                              style={{
                                  backgroundColor: displayElectricity ? '#20C997' : 'inherit',
                                  color: displayElectricity ? 'white' : '#414143FF',
                                  cursor: 'pointer',
                              }}
                          >
-                             <a class="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-muted "
+                             <a className="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-muted "
                                 style={{
                                     color: displayElectricity ? 'white' : '#414143FF',
                                 }}
@@ -156,22 +161,14 @@ export default function Dashboards() {
                 </li>
             </div>
         </div>
-                 <div  class="table-responsive rounded-2 ps-3">
-
+             <div  className="table-responsive rounded-2 ps-3">
                  {displayReports ? <TableDataService/> : ''}
                  {displayComplaints ? <TableData2Service/> : ''}
                  {displayElectricity ? <TableData3Service/> : ''}
             </div>
-
         </div>
-
     </div>
 </div>
-
-
-
-
-
 </>
   )
 }

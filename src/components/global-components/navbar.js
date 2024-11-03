@@ -1,34 +1,74 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { Link, Outlet } from 'react-router-dom';
-import logo from '../assets/zebwise-high-resolution-logo-transparent.png'
+import './Home.css'
+// import logo from '../assets/zebwise-high-resolution-logo-transparent.png'
 
 
 function SidebarComponent() {
+    const currentPath = window.location.pathname;
     return (
         <div className="d-flex">
             {/* Sidebar with the sidebar class */}
             <div className="sidebar">
             <div className="d-flex align-items-center">
-    <img src={logo} alt="Zebwise Logo" style={{ width: '150px', height: '80px', marginBottom: '40px' }} />
-    
+{/*    <img src={logo} alt="Zebwise Logo" style={{ width: '150px', height: '80px', marginBottom: '40px' }} />*/}
+
 </div>
+                <div className="d-flex flex-column">
+                <Link
+                to="/dashboard"
+                className={`nav-link ${currentPath.includes('dashboard') ? 'active-link' : 'inactive-link'}`}
+            >
+                Dashboard
+            </Link>
 
-                <Nav className="flex-column">
-                    {/* Using Link for navigation */}
-                    <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
-                    <Nav.Link as={Link} to="/makecomplaint">Post Complaint</Nav.Link>
-                    <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
-                    <Nav.Link as={Link} to="/reports">Reports</Nav.Link>
-                    <Nav.Link as={Link} to="/leaderboard">Leaderboard</Nav.Link>
-                    <Nav.Link as={Link} to="/notifications">
-    Notifications <span className="notification-count">3</span>
-</Nav.Link>
+            <Link
+                to="/makecomplaint"
+                className={`nav-link ${currentPath.includes('makecomplaint') ? 'active-link' : 'inactive-link'}`}
+            >
+                Post Complaint
+            </Link>
 
-        
-                    <Nav.Link as={Link} to="/settings">Settings</Nav.Link>
-                    
-                </Nav>
+            <Link
+                to="/complaints"
+                className={`nav-link ${currentPath.includes('complaints') ? 'active-link' : 'inactive-link'}`}
+            >
+                Complaints
+            </Link>
+
+            <Link
+                to="/reports"
+                className={`nav-link ${currentPath.includes('reports') ? 'active-link' : 'inactive-link'}`}
+            >
+                Reports
+            </Link>
+
+            <Link
+                to="/leaderboard"
+                className={`nav-link ${currentPath.includes('leaderboard') ? 'active-link' : 'inactive-link'}`}
+            >
+                Leaderboard
+            </Link>
+
+            <Link
+                to="/notifications"
+                className={`nav-link ${currentPath.includes('notifications') ? 'active-link' : 'inactive-link'}`}
+            >
+                Notifications <span className="notification-count">3</span>
+            </Link>
+
+            <Link
+                to="/settings"
+                className="nav-link text-white"
+            >
+                Settings
+            </Link>
+        </div>
+
+
+
+
             </div>
 
             {/* Main Content Area */}

@@ -12,6 +12,7 @@ import ServiceRequestTracking from './components/Tracking';
 import Leaderboard from './components/Leaderboard';
 import Settings from './components/Settings'
 import Notifications from './components/Notifications';
+/*import {Dashboard} from "./components/new-dashboard/screens";*/
 
 // Layout with Sidebar
 function SidebarLayout() {

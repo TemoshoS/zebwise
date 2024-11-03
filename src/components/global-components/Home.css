@@ -26,4 +26,11 @@ body {
   .bg-teal-100 {
     background-color: #d1f2eb !important;
   }
-  
+.active-link {
+  color: green;
+  font-weight: bold;
+}
+
+.inactive-link {
+  color: white;
+}
