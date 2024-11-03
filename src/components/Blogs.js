@@ -14,7 +14,7 @@ const Blogs = () => {
                                     <div className="col-md-6 wow slideInUp" key={index} data-wow-delay={`${0.1 + index * 0.5}s`}>
                                         <div className="blog-item bg-light rounded overflow-hidden">
                                             <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src={`https://siyakha.co.za/images/2024/07/02/image_${index + 1}.jpeg`} alt={`Blog Post ${index + 1}`} />
+                                                <img className="img-fluid" src={`https://via.placeholder.com/600x400?text=Blog+Post+${index + 1}`} alt={`Blog Post ${index + 1}`} />
                                                 <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">Community Event</a>
                                             </div>
                                             <div className="p-4">
@@ -85,7 +85,7 @@ const Blogs = () => {
                                 </div>
                                 {/* Example of a recent post */}
                                 <div className="d-flex rounded overflow-hidden mb-3" style={{ backgroundColor: 'white' }}>
-                                    <img className="img-fluid" src="https://siyakha.co.za/images/2024/07/08/sustainable-development-goals-still-life_small.jpg" style={{ width: '100px', height: '100px', objectFit: 'cover', filter: 'grayscale(100%)' }} alt="Recent Post" />
+                                    <img className="img-fluid" src="https://via.placeholder.com/100x100?text=Recent+Post" style={{ width: '100px', height: '100px', objectFit: 'cover', filter: 'grayscale(100%)' }} alt="Recent Post" />
                                     <a href="" className="h5 fw-semi-bold d-flex align-items-center" style={{ backgroundColor: 'white', color: 'black', padding: '10px', border: '1px solid black' }}>
                                         How We Can Improve Our Neighborhood
                                     </a>
