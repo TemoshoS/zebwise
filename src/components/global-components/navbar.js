@@ -27,15 +27,15 @@ function SidebarComponent() {
                 to="/makecomplaint"
                 className={`nav-link ${currentPath.includes('makecomplaint') ? 'active-link' : 'inactive-link'}`}
             >
-                Post Complaint
+                Report Issue
             </Link>
 
-            <Link
-                to="/complaints"
-                className={`nav-link ${currentPath.includes('complaints') ? 'active-link' : 'inactive-link'}`}
-            >
-                Complaints
-            </Link>
+            {/*<Link*/}
+            {/*    to="/complaints"*/}
+            {/*    className={`nav-link ${currentPath.includes('complaints') ? 'active-link' : 'inactive-link'}`}*/}
+            {/*>*/}
+            {/*    Complaints*/}
+            {/*</Link>*/}
 
             <Link
                 to="/reports"
@@ -60,7 +60,7 @@ function SidebarComponent() {
 
             <Link
                 to="/settings"
-                className="nav-link text-white"
+                className={`nav-link ${currentPath.includes('settings') ? 'active-link' : 'inactive-link'}`}
             >
                 Settings
             </Link>
