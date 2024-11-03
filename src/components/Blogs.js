@@ -1,34 +1,92 @@
 import React from 'react';
-import './Blogs.css'; // Assuming you have a separate CSS file for styles
+import './style.css'; // Make sure to import your styles
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import $ from 'jquery'; // If you're using jQuery
+import 'bootstrap'; // Ensure Bootstrap's JavaScript is included
+import WOW from 'wowjs'; // Import WOW.js for animations
 
 const Blogs = () => {
+    React.useEffect(() => {
+        new WOW.WOW().init(); // Initialize WOW.js for animations
+    }, []);
+
     return (
         <div>
-            <div className="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            {/* Blog Start */}
+            <div className="container-fluid py-5">
                 <div className="container py-5">
                     <div className="row g-5">
                         {/* Blog list Start */}
                         <div className="col-lg-8">
                             <div className="row g-5">
-                                {[...Array(4)].map((_, index) => (
-                                    <div className="col-md-6 wow slideInUp" key={index} data-wow-delay={`${0.1 + index * 0.5}s`}>
-                                        <div className="blog-item bg-light rounded overflow-hidden">
-                                            <div className="blog-img position-relative overflow-hidden">
-                                                <img className="img-fluid" src={`https://via.placeholder.com/600x400?text=Blog+Post+${index + 1}`} alt={`Blog Post ${index + 1}`} />
-                                                <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">Community Event</a>
+                                <div className="col-md-6 wow slideInUp" data-wow-delay="0.1s">
+                                    <div className="blog-item bg-white rounded overflow-hidden shadow-sm">
+                                        <div className="blog-img position-relative overflow-hidden">
+                                            <img className="img-fluid" src="https://via.placeholder.com/400x200?text=Event" alt="Entrepreneurs Summit" />
+                                            <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">Event</a>
+                                        </div>
+                                        <div className="p-4">
+                                            <div className="d-flex mb-3">
+                                                <small className="me-3"><i className="far fa-user text-dark me-2"></i>John Doe</small>
+                                                <small><i className="far fa-calendar-alt text-dark me-2"></i>01 Jan, 2045</small>
                                             </div>
-                                            <div className="p-4">
-                                                <div className="d-flex mb-3">
-                                                    <small className="me-3"><i className="far fa-user text-dark me-2"></i>Admin</small>
-                                                    <small><i className="far fa-calendar-alt text-dark me-2"></i>{new Date().toLocaleDateString()}</small>
-                                                </div>
-                                                <h4 className="mb-3">How to Report Community Issues</h4>
-                                                <p>Learn how you can effectively report issues in your community to drive change.</p>
-                                                <a className="text-uppercase" href="">Read More <i className="bi bi-arrow-right"></i></a>
-                                            </div>
+                                            <h4 className="mb-3">Entrepreneurs Summit Highlights</h4>
+                                            <p>Join us for the latest updates on the entrepreneurs summit, where innovative minds gather.</p>
+                                            <a className="text-uppercase" href="">Read More <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                     </div>
-                                ))}
+                                </div>
+                                <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
+                                    <div className="blog-item bg-white rounded overflow-hidden shadow-sm">
+                                        <div className="blog-img position-relative overflow-hidden">
+                                            <img className="img-fluid" src="https://via.placeholder.com/400x200?text=Anniversary" alt="Tax and SARS increases" />
+                                            <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">Anniversary</a>
+                                        </div>
+                                        <div className="p-4">
+                                            <div className="d-flex mb-3">
+                                                <small className="me-3"><i className="far fa-user text-dark me-2"></i>John Doe</small>
+                                                <small><i className="far fa-calendar-alt text-dark me-2"></i>01 Jan, 2045</small>
+                                            </div>
+                                            <h4 className="mb-3">Tax and SARS Increases</h4>
+                                            <p>Stay informed about the recent changes in tax regulations affecting your business.</p>
+                                            <a className="text-uppercase" href="">Read More <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
+                                    <div className="blog-item bg-white rounded overflow-hidden shadow-sm">
+                                        <div className="blog-img position-relative overflow-hidden">
+                                            <img className="img-fluid" src="https://via.placeholder.com/400x200?text=Community" alt="Funding for start-ups" />
+                                            <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">Community</a>
+                                        </div>
+                                        <div className="p-4">
+                                            <div className="d-flex mb-3">
+                                                <small className="me-3"><i className="far fa-user text-dark me-2"></i>John Doe</small>
+                                                <small><i className="far fa-calendar-alt text-dark me-2"></i>01 Jan, 2045</small>
+                                            </div>
+                                            <h4 className="mb-3">Funding for Start-ups</h4>
+                                            <p>Explore the various funding options available for aspiring entrepreneurs.</p>
+                                            <a className="text-uppercase" href="">Read More <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 wow slideInUp" data-wow-delay="0.6s">
+                                    <div className="blog-item bg-white rounded overflow-hidden shadow-sm">
+                                        <div className="blog-img position-relative overflow-hidden">
+                                            <img className="img-fluid" src="https://via.placeholder.com/400x200?text=News" alt="Community News and Updates" />
+                                            <a className="position-absolute top-0 start-0 bg-dark text-white rounded-end mt-5 py-2 px-4" href="">News</a>
+                                        </div>
+                                        <div className="p-4">
+                                            <div className="d-flex mb-3">
+                                                <small className="me-3"><i className="far fa-user text-dark me-2"></i>John Doe</small>
+                                                <small><i className="far fa-calendar-alt text-dark me-2"></i>01 Jan, 2045</small>
+                                            </div>
+                                            <h4 className="mb-3">Latest Community News and Updates</h4>
+                                            <p>Keep up with the latest news and updates from the community.</p>
+                                            <a className="text-uppercase" href="">Read More <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="col-12 wow slideInUp" data-wow-delay="0.1s">
                                     <nav aria-label="Page navigation">
                                         <ul className="pagination pagination-lg m-0">
@@ -50,54 +108,57 @@ const Blogs = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* Blog End */}
+                        {/* Blog list End */}
 
                         {/* Sidebar Start */}
                         <div className="col-lg-4">
-                            {/* Search Form Start */}
-                            <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                                <div className="input-group">
-                                    <input type="text" className="form-control p-3" placeholder="Search Reports" />
-                                    <button className="btn btn-primary px-4"><i className="bi bi-search"></i></button>
-                                </div>
-                            </div>
-                            {/* Search Form End */}
+                            <div className="sidebar">
+                                <h3 className="section-title">Search</h3>
+                                <form>
+                                    <div className="input-group">
+                                        <input type="text" className="form-control" placeholder="Search..." />
+                                        <button className="btn btn-primary" type="submit">Search</button>
+                                    </div>
+                                </form>
 
-                            {/* Category Start */}
-                            <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                                <div className="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 className="mb-0">Categories</h3>
+                                <h3 className="section-title">Categories</h3>
+                                <div className="d-flex flex-column">
+                                    <a className="text-body" href="">Event</a>
+                                    <a className="text-body" href="">Anniversary</a>
+                                    <a className="text-body" href="">Community</a>
+                                    <a className="text-body" href="">News</a>
                                 </div>
-                                <div className="link-animated d-flex flex-column justify-content-start">
-                                    {['Waste Management (3)', 'Safety Concerns (2)', 'Community Events (1)', 'Health Issues (4)', 'Education (5)'].map((category, index) => (
-                                        <a className="h5 fw-semi-bold bg-light rounded py-2 px-3 mb-2" href="#" key={index}>
-                                            <i className="bi bi-arrow-right me-2"></i>{category}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-                            {/* Category End */}
 
-                            {/* Recent Post Start */}
-                            <div className="mb-5 wow slideInUp" data-wow-delay="0.1s">
-                                <div className="section-title section-title-sm position-relative pb-3 mb-4">
-                                    <h3 className="mb-0" style={{ color: 'black' }}>Recent Posts</h3>
+                                <h3 className="section-title">Follow Us</h3>
+                                <div className="d-flex mb-2">
+                                    <a className="btn-social btn-primary" href="#"><i className="fab fa-facebook-f"></i></a>
+                                    <a className="btn-social btn-primary" href="#"><i className="fab fa-twitter"></i></a>
+                                    <a className="btn-social btn-primary" href="#"><i className="fab fa-linkedin-in"></i></a>
                                 </div>
-                                {/* Example of a recent post */}
-                                <div className="d-flex rounded overflow-hidden mb-3" style={{ backgroundColor: 'white' }}>
-                                    <img className="img-fluid" src="https://via.placeholder.com/100x100?text=Recent+Post" style={{ width: '100px', height: '100px', objectFit: 'cover', filter: 'grayscale(100%)' }} alt="Recent Post" />
-                                    <a href="" className="h5 fw-semi-bold d-flex align-items-center" style={{ backgroundColor: 'white', color: 'black', padding: '10px', border: '1px solid black' }}>
-                                        How We Can Improve Our Neighborhood
-                                    </a>
-                                </div>
-                                {/* Add more recent posts here as needed */}
                             </div>
-                            {/* Recent Post End */}
                         </div>
                         {/* Sidebar End */}
                     </div>
                 </div>
             </div>
+            {/* Blog End */}
+
+            {/* Footer Start */}
+            <div className="footer">
+                <div className="container py-4">
+                    <div className="row">
+                        <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            © 2024 Your Company. All Rights Reserved.
+                        </div>
+                        <div className="col-md-6 text-center text-md-end">
+                            <a href="#">Privacy Policy</a>
+                            <span className="mx-2">|</span>
+                            <a href="#">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Footer End */}
         </div>
     );
 }
