@@ -9,10 +9,10 @@ function SidebarComponent() {
         <div className="d-flex">
             {/* Sidebar with the sidebar class */}
             <div className="sidebar">
-            <div className="d-flex align-items-center">
-    <img src={logo} alt="Zebwise Logo" style={{ width: '150px', height: '80px', marginBottom: '40px' }} />
-    
-</div>
+                <div className="d-flex align-items-center">
+                    <img src={logo} alt="Zebwise Logo" style={{ width: '150px', height: '80px', marginBottom: '40px' }} />
+
+                </div>
 
                 <Nav className="flex-column">
                     {/* Using Link for navigation */}
@@ -22,12 +22,11 @@ function SidebarComponent() {
                     <Nav.Link as={Link} to="/reports">Reports</Nav.Link>
                     <Nav.Link as={Link} to="/leaderboard">Leaderboard</Nav.Link>
                     <Nav.Link as={Link} to="/notifications">
-    Notifications <span className="notification-count">3</span>
-</Nav.Link>
-
-        
+                        Notifications <span className="notification-count">3</span>
+                    </Nav.Link>
                     <Nav.Link as={Link} to="/settings">Settings</Nav.Link>
-                    
+                    {/* <Nav.Link as={Link} to="/userprofile">User Profile</Nav.Link> */}
+
                 </Nav>
             </div>
 
