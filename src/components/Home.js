@@ -30,9 +30,9 @@ export default function Home() {
           <Row>
             <Col md={6}>
               <h4 className="fw-bold mb-3" style={{ color: 'gray', fontSize:'2em' }}>Welcome to</h4>
-              <h1 className="display-6 fw-bold mb-3" style={{ color: '#20C997', fontSize:'3em' }}>Central Database Management</h1>
+              <h1 className="display-6 fw-bold mb-3" style={{ color: '#20C997', fontSize:'3em' }}>Community Connect</h1>
               <p className="text-muted mb-4">
-                CDM is a complete information management solution for your business allowing you to process, analyze, store and share energy usage and power quality data across your entire enterprise.
+                Community Connect is a powerful platform designed to empower citizens and strengthen communities. It enables you to report, track, and share information on service delivery, community initiatives, and local improvements. Whether you're reporting an issue, sharing a success story, or participating in discussions, Community Connect brings everyone together to create a positive, impactful change across your community.
               </p>
               <div className="d-flex align-items-center gap-3 mb-4">
                 <Button variant="teal" className="rounded-pill px-4 py-2" style={{ color: 'white' }} onClick={handleGetStarted}>Get Started</Button>
