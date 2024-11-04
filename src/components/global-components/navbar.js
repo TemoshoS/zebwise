@@ -45,6 +45,13 @@ function SidebarComponent() {
             </Link>
 
             <Link
+                to="/stories"
+                className={`nav-link ${currentPath.includes('stories') ? 'active-link' : 'inactive-link'}`}
+            >
+                Stories
+            </Link>
+
+            <Link
                 to="/leaderboard"
                 className={`nav-link ${currentPath.includes('leaderboard') ? 'active-link' : 'inactive-link'}`}
             >
@@ -62,7 +69,7 @@ function SidebarComponent() {
                 to="/settings"
                 className={`nav-link ${currentPath.includes('settings') ? 'active-link' : 'inactive-link'}`}
             >
-                Settings
+               Account Settings
             </Link>
         </div>
 

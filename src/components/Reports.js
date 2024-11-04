@@ -10,13 +10,13 @@ export default function Reports() {
       <SidebarComponent />
       
       {/* Main Content */}
-      <Container fluid>
+      <Container >
         
         
         {/* Reports Section */}
         <div className="content-wrapper" style={{ marginLeft: '250px', padding: '20px' }}>
           <h1 className="mb-4">Reports</h1>
-          <p>This is the Reports section where you can view and generate reports.</p>
+          <p>View and generate reports' statements.</p>
 
           {/* Filters Section */}
           <Form className="mb-4">
@@ -26,9 +26,9 @@ export default function Reports() {
                   <Form.Label>Report Type</Form.Label>
                   <Form.Control as="select">
                     <option>Select a report type</option>
-                    <option>Sales Report</option>
-                    <option>User Report</option>
-                    <option>Financial Report</option>
+                    <option>Electricity related Report</option>
+                    <option>Sanitation related Report</option>
+                    <option>Housing related Report</option>
                   </Form.Control>
                 </Form.Group>
               </Col>
@@ -63,7 +63,7 @@ export default function Reports() {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>Sales Report Q1</td>
+                <td>Electricity Report Q1</td>
                 <td>01-04-2024</td>
                 <td>
                   <Button variant="outline-secondary" size="sm">View</Button>
@@ -71,7 +71,7 @@ export default function Reports() {
               </tr>
               <tr>
                 <td>2</td>
-                <td>User Report</td>
+                <td>Sanitation Report</td>
                 <td>01-05-2024</td>
                 <td>
                   <Button variant="outline-secondary" size="sm">View</Button>

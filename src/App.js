@@ -12,6 +12,7 @@ import ServiceRequestTracking from './components/Tracking';
 import Leaderboard from './components/Leaderboard';
 import Settings from './components/Settings'
 import Notifications from './components/Notifications';
+import Blogs from "./components/Blogs";
 /*import {Dashboard} from "./components/new-dashboard/screens";*/
 
 // Layout with Sidebar
@@ -41,6 +42,7 @@ function App() {
           <Route path="makecomplaint" element={<MakeComplaint />} />
           <Route path="complaints" element={<Complaints />} />
           <Route path="reports" element={<Reports />} />
+          <Route path="stories" element={<Blogs />} />
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="settings" element={<Settings />} />
           <Route path="notifications" element={<Notifications />} />

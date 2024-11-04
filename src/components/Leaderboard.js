@@ -43,37 +43,42 @@ export default function Dashboards() {
     return (
         <>
             <SidebarComponent style={{ marginRight: 500 }}> </SidebarComponent>
-            <div className="container d-flex">
+            <div className="container ">
+                <div className='mb-3'>
+                    <p className='fs-3 fw-bold text-muted m-0 p-0'>Leaderboard</p>
+                    <p className='fs-6 text-muted'>view the ranking of active community members based on engagements </p>
+                </div>
                 <div className="container pt-5 overflow-auto">
                     <div className="bg-light p-0 m-0 mb-5">
                         <div className="card-header d-lg-flex justify-content-lg-between p-0 m-0">
                             <ul className="nav cursor-pointer p-0 m-0">
                                 <li className="nav-item">
-                                    <a className="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-primary">Users Leaderboard</a>
+                                    <a className="nav-link btn-primary px-5 p-3 text-uppercase fw-semibold text-primary">Users
+                                        Leaderboard</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="table-responsive rounded-2 ps-3">
                             <Table striped bordered hover className="align-middle leaderboard-table">
                                 <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Full Name</th>
-                                        <th>Score</th>
-                                    </tr>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Full Name</th>
+                                    <th>Score</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    {users.map((user, index) => (
-                                        <tr key={index} className="table-light cursor-pointer">
-                                            <td>
-                                                {index + 1} {/* Rank */}
-                                                
-                                            </td>
-                                            <td>{user.name} {getMedal(index + 1)} {/* Medal for top 3 */}</td>
-                                            
-                                            <td>{user.score}</td>
-                                        </tr>
-                                    ))}
+                                {users.map((user, index) => (
+                                    <tr key={index} className="table-light cursor-pointer">
+                                        <td>
+                                            {index + 1} {/* Rank */}
+
+                                        </td>
+                                        <td>{user.name} {getMedal(index + 1)} {/* Medal for top 3 */}</td>
+
+                                        <td>{user.score}</td>
+                                    </tr>
+                                ))}
                                 </tbody>
                             </Table>
                         </div>

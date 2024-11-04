@@ -10,23 +10,26 @@ export default function Notifications() {
     ]);
 
     return (
-        <div className="d-flex">
-            <SidebarComponent /> {/* Sidebar on the left */}
-            <div className="notifications-container flex-grow-1 p-4"> {/* Make the notifications section grow */}
-                <h2>Notifications</h2>
-                <div className="notification-count">
-                    <span>You have {notifications.length} notifications</span>
+        <>
+            <SidebarComponent/> {/* Sidebar on the left */}
+            <div className="container">
+                <div className="notifications-container flex-grow-1 p-4"> {/* Make the notifications section grow */}
+                    <h2>Notifications</h2>
+                    <div className="notification-count">
+                        <span>You have {notifications.length} notifications</span>
+                    </div>
+                    <ul className="notification-list">
+                        {notifications.length > 0 ? (
+                            notifications.map(notification => (
+                                <li key={notification.id}>{notification.message}</li>
+                            ))
+                        ) : (
+                            <li>No notifications available.</li>
+                        )}
+                    </ul>
                 </div>
-                <ul className="notification-list">
-                    {notifications.length > 0 ? (
-                        notifications.map(notification => (
-                            <li key={notification.id}>{notification.message}</li>
-                        ))
-                    ) : (
-                        <li>No notifications available.</li>
-                    )}
-                </ul>
             </div>
-        </div>
+        </>
+
     );
 }

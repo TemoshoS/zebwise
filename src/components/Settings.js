@@ -16,7 +16,7 @@ function Settings() {
     const [userProfile, setUserProfile] = useState({
         displayName: 'John Doe',
         joinDate: '2023-01-15',
-        profilePicture: '/api/placeholder/150/150',
+        profilePicture: '/images/profile.jpg',
         role: 'Community Member',
         totalComplaints: 0,
         lastActive: '2024-03-28'
@@ -61,9 +61,8 @@ function Settings() {
     };
 
     return (
-        <div className="d-flex">
+        <>
             <SidebarComponent />
-
             <Container className="my-5">
                 {/* User Profile Card */}
                 <Card className="mb-4">
@@ -187,7 +186,7 @@ function Settings() {
                     </Card.Body>
                 </Card>
             </Container>
-        </div>
+        </>
     );
 }
 
