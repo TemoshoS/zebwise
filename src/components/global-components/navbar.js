@@ -21,7 +21,9 @@ function SidebarComponent() {
                     <Nav.Link as={Link} to="/complaints">Complaints</Nav.Link>
                     <Nav.Link as={Link} to="/reports">Reports</Nav.Link>
                     <Nav.Link as={Link} to="/leaderboard">Leaderboard</Nav.Link>
+                    <Nav.Link as={Link} to="/bestpratice">Best Pratice</Nav.Link>
                     <Nav.Link as={Link} to="/notifications">
+                    
     Notifications <span className="notification-count">3</span>
 </Nav.Link>
 

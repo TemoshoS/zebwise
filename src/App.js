@@ -12,6 +12,7 @@ import ServiceRequestTracking from './components/Tracking';
 import Leaderboard from './components/Leaderboard';
 import Settings from './components/Settings'
 import Notifications from './components/Notifications';
+import Bestpratice from './components/Bestpractice';
 
 // Layout with Sidebar
 function SidebarLayout() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="settings" element={<Settings />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="bestpratice" element={<Bestpratice />} />
         {/*</Route>*/}
       </Routes>
     </Router>
